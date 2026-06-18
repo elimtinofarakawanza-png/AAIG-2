@@ -9,8 +9,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #0a0a0a;
+            background: linear-gradient(135deg, #00c6ff, #0072ff, #00ff9d, #00c6ff);
+            background-size: 400% 400%;
+            animation: bgMove 12s ease infinite;
             color: white;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -20,33 +28,44 @@
         }
 
         .block {
-            background: #1a1a1a;
             padding: 25px;
             margin: 25px 0;
-            border-radius: 12px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.25);
         }
 
         h1, h2 {
             margin-top: 0;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
 
         .invite-btn {
             display: inline-block;
-            background: #5865F2;
+            background: linear-gradient(135deg, #5865F2, #7a85ff);
             color: white;
             padding: 15px 25px;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 20px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 10px;
+            box-shadow: 0 0 15px rgba(88,101,242,0.7);
+            transition: 0.3s;
+        }
+
+        .invite-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px rgba(88,101,242,1);
         }
 
         footer {
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            background: #111;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(6px);
         }
     </style>
 </head>
@@ -58,28 +77,25 @@
     <!-- HEADER -->
     <div class="block">
         <h1>Air Africa International Group</h1>
-        <p>Connecting Africa, Europe, the Middle East, and North America.</p>
+        <p>Connecting Africa, Europe, the Middle East, and North America with colour, energy, and unity.</p>
 
         <a href="https://discord.gg/DtAXnH8CE" target="_blank" class="invite-btn">
             Join the AAIG Discord
         </a>
     </div>
 
-    <!-- NEW: GROUP OVERVIEW -->
+    <!-- GROUP OVERVIEW -->
     <div class="block">
         <h2>About the AAIG Group</h2>
         <p>
-            The Air Africa International Group (AAIG) is a multinational airline alliance created to unify
-            air travel across Africa and connect the continent to the world. AAIG brings together airlines
-            from Africa, Europe, the Middle East, and North America under one shared mission: to improve
-            global connectivity, strengthen African aviation, and deliver a consistent, high‑quality travel
-            experience across all member airlines.
+            The Air Africa International Group (AAIG) is a global airline alliance built to unite continents
+            through powerful aviation partnerships. AAIG blends African leadership with international reach,
+            creating a vibrant network that connects cultures, economies, and people.
         </p>
         <p>
-            AAIG focuses on cooperation, shared growth, and operational excellence. Member airlines benefit
-            from coordinated schedules, shared routes, expanded networks, and unified service standards.
-            From low‑cost regional flights to premium long‑haul journeys, AAIG represents a new era of
-            aviation led by African leadership and global partnership.
+            With member airlines across Africa, Europe, the Middle East, and North America, AAIG focuses on
+            shared growth, modern aviation standards, and seamless travel experiences. From low‑cost regional
+            flights to premium long‑haul journeys, AAIG represents a new era of colourful, connected aviation.
         </p>
     </div>
 
@@ -88,81 +104,16 @@
     <div class="block">
         <h2>Air Zimbabwe</h2>
         <p>
-            Air Zimbabwe is the national carrier of Zimbabwe and one of the founding pillars of AAIG.
-            With decades of aviation heritage, it connects Harare to major African and international
-            destinations. Known for its resilience and cultural pride, Air Zimbabwe brings stability,
-            tradition, and national identity to the alliance. Its mission is to rebuild regional strength,
-            expand long‑haul capability, and restore Zimbabwe’s aviation legacy on the global stage.
+            Air Zimbabwe stands as a symbol of national pride and African aviation heritage. As a founding
+            member of AAIG, it connects Harare to key African and global destinations. Known for resilience,
+            culture, and identity, Air Zimbabwe brings tradition and strength to the alliance while working
+            to expand long‑haul operations and restore Zimbabwe’s global aviation presence.
         </p>
     </div>
 
     <div class="block">
         <h2>AerCYMRU</h2>
         <p>
-            AerCYMRU is the flagship airline of Wales and the lead airline of AAIG. It combines modern
-            European aviation standards with strong Welsh identity, offering a premium yet accessible
-            travel experience. AerCYMRU is known for its ambitious long‑haul routes, rapid expansion,
-            and high‑quality service. As the alliance leader, it sets the tone for innovation, safety,
-            and operational excellence across all AAIG member airlines.
-        </p>
-    </div>
-
-    <div class="block">
-        <h2>Fastjet MAX</h2>
-        <p>
-            Fastjet MAX is AAIG’s dedicated low‑cost carrier, designed to make air travel affordable
-            across Africa. It focuses on high‑efficiency operations, quick turnarounds, and point‑to‑point
-            connectivity between underserved cities. Despite being low‑cost, Fastjet MAX maintains strong
-            safety standards and reliable service. Its mission is simple: connect Africa’s people,
-            economies, and opportunities.
-        </p>
-    </div>
-
-    <div class="block">
-        <h2>Arabic Airways</h2>
-        <p>
-            Arabic Airways bridges the Middle East and Africa within AAIG. It offers premium service,
-            modern aircraft, and strong regional connectivity through major hubs in the Gulf region.
-            Known for its hospitality and luxury‑focused cabins, Arabic Airways strengthens AAIG’s global
-            reach and brings a high‑quality service standard to the alliance. It connects Africa to Asia,
-            Europe, and the Middle East with seamless travel experiences.
-        </p>
-    </div>
-
-    <div class="block">
-        <h2>FlyAmerican</h2>
-        <p>
-            FlyAmerican is AAIG’s North American partner airline, expanding the alliance’s footprint
-            across the United States, Canada, and beyond. It provides seamless transatlantic connections,
-            strong domestic coverage, and access to major U.S. hubs. FlyAmerican brings American aviation
-            scale, reliability, and network strength to AAIG, making global travel smoother for passengers
-            across all continents.
-        </p>
-    </div>
-
-    <!-- NEWS -->
-    <div class="block">
-        <h2>AAIG News</h2>
-        <p>
-            Latest updates, announcements, and alliance developments will appear here as AAIG continues
-            to expand its global network and strengthen partnerships across continents.
-        </p>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="block">
-        <h2>Contact AAIG</h2>
-        <p>
-            For inquiries, partnerships, or support, please reach out to the AAIG team.  
-            More contact options will be added soon as the alliance grows.
-        </p>
-    </div>
-
-</div>
-
-<footer>
-    ©AAIG 2026
-</footer>
-
-</body>
-      </html>
+            AerCYMRU is the flagship airline of Wales and the lead airline of AAIG. It blends modern European
+            aviation with Welsh culture, offering premium service and ambitious long‑haul expansion. As the
+            alliance leader, AerCYMRU sets the standard for safety, innovation, and operational excellence
